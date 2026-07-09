@@ -587,3 +587,17 @@ Modifications :
 - cartes affichées les unes sous les autres ;
 - largeur de lecture limitée pour améliorer le confort ;
 - vérification liens internes : 0 lien(s) cassé(s).
+
+
+## v38 — Correction CSS GitHub Pages
+
+Problème corrigé :
+- `dist/output.css` contenait seulement un commentaire placeholder.
+- GitHub chargeait donc un fichier CSS quasiment vide.
+
+Corrections :
+- génération d’un vrai `dist/output.css` avec les styles du site ;
+- ajout de classes utilitaires minimales pour remplacer les classes Tailwind les plus utilisées ;
+- chargement de Tailwind Browser CDN comme filet de sécurité ;
+- aucune commande `npm install` ou `npm run build` nécessaire ;
+- vérification liens internes : 0 lien(s) cassé(s).
